@@ -1,0 +1,240 @@
+/* *{
+    box-sizing:  border-box;
+} */
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    height: 200vh;
+    font-family: 'ABeeZee', sans-serif;
+
+}
+
+header {
+    display: flex;
+    max-width: 100%;
+    height: 100px;
+    background-color: rgb(209, 186, 149);
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px solid grey;
+    justify-content: center;
+    color: rgb(43, 40, 40);
+    overflow: hidden;
+}
+
+
+nav {
+    flex-basis: 100%;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-list > li {
+    padding: 0px 20px;
+}
+
+.nav-list img {
+
+    height: 90px;
+    width: 140px;
+    filter: contrast(0%);
+}
+
+
+/* Main showcase with image */
+.showcase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* padding: 1px; */
+    height: calc(100vh - 103px);
+    width: 100%;
+    background-image: url("https://www.swopememorialgolfcourse.com/images/slider-2.jpg");
+    filter: sepia(50%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-bottom: 3px solid rgb(209, 186, 149);
+    
+    /* object-fit: scale-down; */
+    
+}
+
+
+.showcase h1 {
+    font-family: 'Cormorant Infant', serif;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 4em;
+    color: rgb(56, 48, 48);
+    z-index: 3;
+    padding: 20px;
+}
+
+.showcase-links {
+    display: flex;
+    justify-content: space-between;
+    width: 300
+    
+}
+
+.showcase-links a {
+    padding: 15px;
+    background-color: blue;
+    border-radius: 300px;
+    margin: 10px;
+    text-decoration: none;
+    color: brown;
+}
+
+.showcase-links a:nth-child(1) {
+    color: white;
+    background-color: black;
+}
+
+.showcase-links a:nth-child(2) {
+    color: white;
+    background-color: rgb(29, 28, 28);
+}
+
+.showcase a.down  {
+    /* width: 50px; */
+    margin-top: auto;
+    background-color: rgb(209, 186, 149); 
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+.showcase a.down img {
+    filter: saturate(100%);
+    width: 50px;
+    height: 30px;
+}
+
+.showcase a.down img:hover {
+    filter: contrast(0%);
+}
+
+.showcase a.down img:click {
+    filter: contrast(0%);
+}
+
+/* section about etc */
+#info .block {
+    /* display: flex;  when screen is 890px  */
+}
+
+#info .block .block-image {
+    flex-basis: 55%;
+    background-image: url('../images/ocean.png');
+    background-position: center;
+    background-size: cover;
+
+}
+
+#info {
+    border-bottom: 3px solid white;
+}
+
+#info .block .block-text {
+    flex-basis: 45%;
+    color: white;
+    background-color: #202025;
+    overflow: hidden;
+    min-height: 40vh;
+
+}
+
+#info .block .block-text h2{
+    text-align: center;
+    margin: 20px;
+    font-size: 2em;
+    letter-spacing: 2px;
+}
+
+#info .block .block-text p{
+    padding: 20px;
+}
+
+
+/* selects every .block that is the 2nd child of its parent */
+.block:nth-child(2) .block-text {
+    order: 1;
+}
+
+.block:nth-child(2) .block-image {
+    order: 2;
+}
+
+.wrapper {
+    
+    padding-top: 40px;
+    background-color: #D1BA95;
+    color: rgb(53, 48, 48)
+}
+
+#calendar {
+    margin: auto;
+    max-width: 960px;
+    text-align: center;
+
+}
+
+#calendar h4 {
+    font-weight: bolder;
+    font-size: 2em;
+    margin-bottom: 25px;
+    font-family: 'Cormorant Infant', serif;
+}
+
+.responsiveCal {
+    position: relative; padding-bottom: 75%; height: 0; overflow: hidden;
+}
+
+.responsiveCal iframe {
+    position: absolute; top:0; left: 0; width: 100%; height: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+    /* section about etc */
+    #info .block {
+        display: flex;
+        /* height: 50vh; */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* section about etc */
+    #info .block .block-image {
+        background-position: center;
+        height: 30vh;
+    }
+
+    #info .block .block-text {
+        background-position: center;
+        min-height: 25vh;
+    }
+}
+
+
+/* .showcase::after {
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    background-color: rgba(63, 24, 46, 0.1);
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}  */
