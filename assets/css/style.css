@@ -206,15 +206,20 @@ nav {
     padding: 10px;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 767px) {
     /* section about etc */
     #info .block {
         display: flex;
-        /* height: 50vh; */
+        height: 40vh;
+    }
+
+    #info .block .block-text {
+        background-position: center;
+        min-height: 25vh;
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
     /* section about etc */
     #info .block .block-image {
         background-position: center;
